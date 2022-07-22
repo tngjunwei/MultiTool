@@ -21,7 +21,7 @@ jobs:
         pip install pycodestyle
     - name: Analysing the code with pylint
       run: |
-        pylint $(git ls-files '*.py')
+        pylint ./src
     - name: Ensure code is PEP-8 standards
       run: pycodestyle .
     - name: Run tests
