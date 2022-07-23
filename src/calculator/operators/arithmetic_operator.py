@@ -22,7 +22,6 @@ class ArithmeticOperator:
 
         raise NotImplementedError
 
-
 class Add(ArithmeticOperator):
     '''This class implements the Add operation.'''
 
