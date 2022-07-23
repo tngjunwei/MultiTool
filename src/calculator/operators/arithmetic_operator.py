@@ -72,7 +72,13 @@ class Divide(ArithmeticOperator):
     '''This class implements the Divide operation.'''
 
     def __call__(self):
-        self.result = self.args[0] / self.args[1]
+        if self.args[1] == 0:
+            if self.args[0] < 0:
+                self.result = float("-inf")
+            else:
+                self.result = float("inf")
+        else:
+            self.result = self.args[0] / self.args[1]
         return self.result
 
     def __str__(self):
